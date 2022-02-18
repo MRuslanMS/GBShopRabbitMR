@@ -99,13 +99,10 @@
 		DBE24C1527C0335D00342549 /* GBShopRabbitMR */ = {
 			isa = PBXGroup;
 			children = (
-				DBE24C1627C0335D00342549 /* AppDelegate.swift */,
-				DBE24C1827C0335D00342549 /* SceneDelegate.swift */,
-				DBE24C1A27C0335D00342549 /* ViewController.swift */,
-				DBE24C1C27C0335D00342549 /* Main.storyboard */,
-				DBE24C1F27C0335E00342549 /* Assets.xcassets */,
-				DBE24C2127C0335E00342549 /* LaunchScreen.storyboard */,
-				DBE24C2427C0335E00342549 /* Info.plist */,
+				DBE24C4627C03EAA00342549 /* App */,
+				DBE24C4D27C03F3800342549 /* Core */,
+				DBE24C4C27C03F2500342549 /* Resources */,
+				DBE24C4B27C03F0E00342549 /* Environments */,
 			);
 			path = GBShopRabbitMR;
 			sourceTree = "<group>";
@@ -125,6 +122,73 @@
 				DBE24C3927C0335E00342549 /* GBShopRabbitMRUITestsLaunchTests.swift */,
 			);
 			path = GBShopRabbitMRUITests;
+			sourceTree = "<group>";
+		};
+		DBE24C4627C03EAA00342549 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DBE24C1627C0335D00342549 /* AppDelegate.swift */,
+				DBE24C1827C0335D00342549 /* SceneDelegate.swift */,
+				DBE24C4A27C03EEC00342549 /* BusinessLogic */,
+				DBE24C4927C03EDE00342549 /* Entity */,
+				DBE24C4827C03ED100342549 /* Assembly */,
+				DBE24C4727C03EB800342549 /* Flows */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		DBE24C4727C03EB800342549 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				DBE24C1A27C0335D00342549 /* ViewController.swift */,
+				DBE24C1C27C0335D00342549 /* Main.storyboard */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		DBE24C4827C03ED100342549 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		DBE24C4927C03EDE00342549 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		DBE24C4A27C03EEC00342549 /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BusinessLogic;
+			sourceTree = "<group>";
+		};
+		DBE24C4B27C03F0E00342549 /* Environments */ = {
+			isa = PBXGroup;
+			children = (
+				DBE24C2427C0335E00342549 /* Info.plist */,
+			);
+			path = Environments;
+			sourceTree = "<group>";
+		};
+		DBE24C4C27C03F2500342549 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DBE24C1F27C0335E00342549 /* Assets.xcassets */,
+				DBE24C2127C0335E00342549 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DBE24C4D27C03F3800342549 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -441,7 +505,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U7ZJ8TXBT3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GBShopRabbitMR/Info.plist;
+				INFOPLIST_FILE = GBShopRabbitMR/Environments/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -469,7 +533,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U7ZJ8TXBT3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GBShopRabbitMR/Info.plist;
+				INFOPLIST_FILE = GBShopRabbitMR/Environments/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

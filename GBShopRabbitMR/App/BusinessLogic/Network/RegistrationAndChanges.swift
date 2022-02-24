@@ -24,12 +24,12 @@ class RegistrationAndChanges: AbstractRequestFactory {
 extension RegistrationAndChanges: RegistrationAndDataChangesFactory {
     func registration(idUser: Int, userName: String, password: String, userEmail: String, userGender: String, userCreditCardNumber: String, userBio: String, completionHandler: @escaping(AFDataResponse<RegistrationUserResult>) -> Void) {
         
-        let requestModel = Registration(baseUrl: baseUrl, idUser: Int, userName: String, password: String, userEmail: String, userGender: String, userCreditCardNumber: String, userBio: String)
+        let requestModel = Registration(baseUrl: baseUrl, idUser: idUser, userName: userName, password: password, userEmail: userEmail, userGender: userGender, userCreditCardNumber: userCreditCardNumber, userBio: userBio)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
     func dataChange(idUser: Int, userName: String, password: String, userEmail: String, userGender: String, userCreditCardNumber: String, userBio: String, completionHandler: @escaping(AFDataResponse<ChangeUserDataResult>) -> Void) {
         
-        let requestModel = Changes(baseUrl: baseUrl, idUser: Int, userName: String, password: String, userEmail: String, userGender: String, userCreditCardNumber: String, userBio: String)
+        let requestModel = Changes(baseUrl: baseUrl, idUser: idUser, userName: userName, password: password, userEmail: userEmail, userGender: userGender, userCreditCardNumber: userCreditCardNumber, userBio: userBio)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 }

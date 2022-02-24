@@ -34,7 +34,7 @@ extension DataRequest {
     @discardableResult
     func responseCodable<T: Decodable>(
         errorParser: AbstractErrorParser,
-        queue: DispatchQueue  .main,
+        queue: DispatchQueue = .main,
         completionHandler: @escaping (AFDataResponse<T>) -> Void) -> Self {
             let responseSerialaiser = CustomDecodableSerializer<T>(errorParser: errorParser)
             return response(queue: queue, responseSerializer: responseSerialaiser, completionHandler: completionHandler)

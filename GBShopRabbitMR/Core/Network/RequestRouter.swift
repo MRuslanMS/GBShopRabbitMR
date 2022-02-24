@@ -12,11 +12,11 @@ enum RequestRouterEncoding {
     case url, json
 }
 
-protocol RequestRouter: URLRequestConvertible{
+protocol RequestRouter: URLRequestConvertible {
     var baseUrl: URL { get }
     var method: HTTPMethod { get }
     var path: String { get }
-    var parameters: Parameters { get }
+    var parameters: Parameters? { get }
     var fullUrl: URL { get }
     var encoding: RequestRouterEncoding { get }
 }

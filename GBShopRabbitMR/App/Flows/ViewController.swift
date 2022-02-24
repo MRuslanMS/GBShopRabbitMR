@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         //authLogin(userName: "Somebody", password: "mypassword")
         //authLogout(idUser: 123)
         //userRegistration(idUser: 123, userName: "Somebody", password: "mypassword", userEmail: "some@some.ru", userGender: "m", userCreditCardNumber: "9872389-2424-234224-234", userBio: "This is good! I think I will switch to another language")
-        //userDataChanges(idUser: 123, userName: "Somebody", password: "mypassword", userEmail: "some@some.ru", userGender: "m", userCreditCardNumber: "9872389-2424-234224-234", userBio: "This is good! I think I will switch to another language")
+       // userDataChanges(idUser: 123, userName: "Somebody", password: "mypassword", userEmail: "some@some.ru", userGender: "m", userCreditCardNumber: "9872389-2424-234224-234", userBio: "This is good! I think I will switch to another language")
         //getProductList(pageNumber: 1, idCategory: 1)
         //authRequest()
     }
@@ -32,8 +32,9 @@ class ViewController: UIViewController {
                 print(error.localizedDescription)
             }
         }
-   */ }
-    func authLogin(userName: String, password: String) {
+    }
+   */
+     func authLogin(userName: String, password: String) {
             let auth = requestFactory.makeAuthRequestFactory()
             auth.login(userName: "Somebody", password: "MyPassword") { response in
                 switch response.result {
@@ -81,7 +82,7 @@ class ViewController: UIViewController {
             }
         }
         
-        func getProductList(pageNumber: Int, idCategory: Int) {
+       /* func getProductList(pageNumber: Int, idCategory: Int) {
             let getProducts = requestFactory.makeProductsFactory()
             getProducts.productList(pageNumber: pageNumber, idCategory: idCategory) { response in
                 switch response.result {
@@ -104,6 +105,6 @@ class ViewController: UIViewController {
                 }
             }
         }
-    }
+*/
 }
 

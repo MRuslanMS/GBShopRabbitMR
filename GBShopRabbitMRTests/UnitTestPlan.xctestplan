@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "405CA9EC-EFF1-4F52-8DDD-BE13C47937CE",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:GBShopRabbitMR.xcodeproj",
+        "identifier" : "DBE24C2827C0335E00342549",
+        "name" : "GBShopRabbitMRTests"
+      }
+    }
+  ],
+  "version" : 1
+}

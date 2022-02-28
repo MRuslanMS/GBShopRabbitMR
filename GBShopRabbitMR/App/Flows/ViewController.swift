@@ -20,8 +20,8 @@ class ViewController: UIViewController {
         //authRequest()
     }
     
-    
-    /*func authRequest() {
+  /*
+    func authRequest() {
         let auth = requestFactory.makeAuthRequestFactory()
         auth.login(userName: "Somebody", password: "MyPassword")
         { response in

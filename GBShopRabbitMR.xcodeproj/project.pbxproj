@@ -7,6 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		546ED5F918371C05E6192747 /* Pods_GBShopRabbitMR_GBShopRabbitMRUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6ECA7A6D6018BD9B49BA0CB /* Pods_GBShopRabbitMR_GBShopRabbitMRUITests.framework */; };
+		642C8BEBF6B4D4548CEDB556 /* Pods_GBShopRabbitMRTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85C5F4FBD5C08B6E6AC78D26 /* Pods_GBShopRabbitMRTests.framework */; };
+		C23C646A5F8555AEC8B6C335 /* Pods_GBShopRabbitMR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18919D9B67F6AF87485097D5 /* Pods_GBShopRabbitMR.framework */; };
+		DB0C75A527C3AF1200CB8940 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0C75A427C3AF1200CB8940 /* Auth.swift */; };
+		DB0C75A727C3AFA500CB8940 /* AuthRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0C75A627C3AFA500CB8940 /* AuthRequestFactory.swift */; };
+		DB0C75A927C3B1AA00CB8940 /* RegistrationAndChanges.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0C75A827C3B1AA00CB8940 /* RegistrationAndChanges.swift */; };
+		DB0C75AB27C3BFDC00CB8940 /* RegistrationAndDataChangesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0C75AA27C3BFDC00CB8940 /* RegistrationAndDataChangesFactory.swift */; };
+		DB0C75AD27C3C14200CB8940 /* ChangeUserDataResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0C75AC27C3C14200CB8940 /* ChangeUserDataResult.swift */; };
+		DB0C75AF27C3C1AA00CB8940 /* LoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0C75AE27C3C1AA00CB8940 /* LoginResult.swift */; };
+		DB0C75B127C3C21700CB8940 /* LogoutResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0C75B027C3C21700CB8940 /* LogoutResult.swift */; };
+		DB0C75B327C3C6C000CB8940 /* RegistrationUserResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0C75B227C3C6C000CB8940 /* RegistrationUserResult.swift */; };
+		DB0C75B527C3C72900CB8940 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0C75B427C3C72900CB8940 /* User.swift */; };
+		DB0C75B727C3C91200CB8940 /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0C75B627C3C91200CB8940 /* RequestRouter.swift */; };
+		DB0C75B927C3CC8800CB8940 /* ResponseCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0C75B827C3CC8800CB8940 /* ResponseCodable.swift */; };
+		DB0C75BB27C3D22F00CB8940 /* AbstractErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0C75BA27C3D22F00CB8940 /* AbstractErrorParser.swift */; };
+		DB0C75BD27C3D32F00CB8940 /* ErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0C75BC27C3D32F00CB8940 /* ErrorParser.swift */; };
+		DB0C75BF27C3D3CF00CB8940 /* AbstractRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0C75BE27C3D3CF00CB8940 /* AbstractRequestFactory.swift */; };
+		DB0C75C127C3DD0B00CB8940 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0C75C027C3DD0B00CB8940 /* RequestFactory.swift */; };
+		DBBE3EBC27C7C2F000106565 /* ProductsRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE3EBB27C7C2F000106565 /* ProductsRequestFactory.swift */; };
+		DBBE3EBE27C7C34500106565 /* ProductsRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE3EBD27C7C34500106565 /* ProductsRequests.swift */; };
+		DBBE3EC027C7C5B700106565 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE3EBF27C7C5B700106565 /* Product.swift */; };
+		DBBE3EC227C7C5CE00106565 /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE3EC127C7C5CE00106565 /* ProductList.swift */; };
+		DBBE3EC427C7CB0900106565 /* GBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE3EC327C7CB0900106565 /* GBTests.swift */; };
 		DBE24C1727C0335D00342549 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE24C1627C0335D00342549 /* AppDelegate.swift */; };
 		DBE24C1927C0335D00342549 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE24C1827C0335D00342549 /* SceneDelegate.swift */; };
 		DBE24C1B27C0335D00342549 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE24C1A27C0335D00342549 /* ViewController.swift */; };
@@ -36,6 +59,35 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18919D9B67F6AF87485097D5 /* Pods_GBShopRabbitMR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GBShopRabbitMR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		657E888E6E135A19695ACE20 /* Pods-GBShopRabbitMR-GBShopRabbitMRUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBShopRabbitMR-GBShopRabbitMRUITests.release.xcconfig"; path = "Target Support Files/Pods-GBShopRabbitMR-GBShopRabbitMRUITests/Pods-GBShopRabbitMR-GBShopRabbitMRUITests.release.xcconfig"; sourceTree = "<group>"; };
+		85C5F4FBD5C08B6E6AC78D26 /* Pods_GBShopRabbitMRTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GBShopRabbitMRTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6ECA7A6D6018BD9B49BA0CB /* Pods_GBShopRabbitMR_GBShopRabbitMRUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GBShopRabbitMR_GBShopRabbitMRUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C596479A494C77050B454A2A /* Pods-GBShopRabbitMR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBShopRabbitMR.debug.xcconfig"; path = "Target Support Files/Pods-GBShopRabbitMR/Pods-GBShopRabbitMR.debug.xcconfig"; sourceTree = "<group>"; };
+		D464B4512BC47D3E5B8418B8 /* Pods-GBShopRabbitMR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBShopRabbitMR.release.xcconfig"; path = "Target Support Files/Pods-GBShopRabbitMR/Pods-GBShopRabbitMR.release.xcconfig"; sourceTree = "<group>"; };
+		DB0C75A427C3AF1200CB8940 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		DB0C75A627C3AFA500CB8940 /* AuthRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestFactory.swift; sourceTree = "<group>"; };
+		DB0C75A827C3B1AA00CB8940 /* RegistrationAndChanges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationAndChanges.swift; sourceTree = "<group>"; };
+		DB0C75AA27C3BFDC00CB8940 /* RegistrationAndDataChangesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationAndDataChangesFactory.swift; sourceTree = "<group>"; };
+		DB0C75AC27C3C14200CB8940 /* ChangeUserDataResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserDataResult.swift; sourceTree = "<group>"; };
+		DB0C75AE27C3C1AA00CB8940 /* LoginResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResult.swift; sourceTree = "<group>"; };
+		DB0C75B027C3C21700CB8940 /* LogoutResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutResult.swift; sourceTree = "<group>"; };
+		DB0C75B227C3C6C000CB8940 /* RegistrationUserResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUserResult.swift; sourceTree = "<group>"; };
+		DB0C75B427C3C72900CB8940 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		DB0C75B627C3C91200CB8940 /* RequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
+		DB0C75B827C3CC8800CB8940 /* ResponseCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCodable.swift; sourceTree = "<group>"; };
+		DB0C75BA27C3D22F00CB8940 /* AbstractErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractErrorParser.swift; sourceTree = "<group>"; };
+		DB0C75BC27C3D32F00CB8940 /* ErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorParser.swift; sourceTree = "<group>"; };
+		DB0C75BE27C3D3CF00CB8940 /* AbstractRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractRequestFactory.swift; sourceTree = "<group>"; };
+		DB0C75C027C3DD0B00CB8940 /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
+		DBBE3EBB27C7C2F000106565 /* ProductsRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsRequestFactory.swift; sourceTree = "<group>"; };
+		DBBE3EBD27C7C34500106565 /* ProductsRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsRequests.swift; sourceTree = "<group>"; };
+		DBBE3EBF27C7C5B700106565 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		DBBE3EC127C7C5CE00106565 /* ProductList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductList.swift; sourceTree = "<group>"; };
+		DBBE3EC327C7CB0900106565 /* GBTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBTests.swift; sourceTree = "<group>"; };
+		DBBE3EC927C7D65600106565 /* UnitTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UnitTestPlan.xctestplan; sourceTree = "<group>"; };
+		DBBE3ECA27C7D69F00106565 /* UITestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UITestPlan.xctestplan; sourceTree = "<group>"; };
+		DBBE3ECB27C7D8D700106565 /* FullTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = FullTestPlan.xctestplan; sourceTree = "<group>"; };
 		DBE24C1327C0335D00342549 /* GBShopRabbitMR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBShopRabbitMR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBE24C1627C0335D00342549 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBE24C1827C0335D00342549 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +101,9 @@
 		DBE24C3327C0335E00342549 /* GBShopRabbitMRUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GBShopRabbitMRUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBE24C3727C0335E00342549 /* GBShopRabbitMRUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBShopRabbitMRUITests.swift; sourceTree = "<group>"; };
 		DBE24C3927C0335E00342549 /* GBShopRabbitMRUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBShopRabbitMRUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E1F14B6FDF7684F18A8E7038 /* Pods-GBShopRabbitMRTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBShopRabbitMRTests.release.xcconfig"; path = "Target Support Files/Pods-GBShopRabbitMRTests/Pods-GBShopRabbitMRTests.release.xcconfig"; sourceTree = "<group>"; };
+		F09BC5CA1A1FBAB69F3A7833 /* Pods-GBShopRabbitMR-GBShopRabbitMRUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBShopRabbitMR-GBShopRabbitMRUITests.debug.xcconfig"; path = "Target Support Files/Pods-GBShopRabbitMR-GBShopRabbitMRUITests/Pods-GBShopRabbitMR-GBShopRabbitMRUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F36B4940ED1B378493E02A7B /* Pods-GBShopRabbitMRTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBShopRabbitMRTests.debug.xcconfig"; path = "Target Support Files/Pods-GBShopRabbitMRTests/Pods-GBShopRabbitMRTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C23C646A5F8555AEC8B6C335 /* Pods_GBShopRabbitMR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				642C8BEBF6B4D4548CEDB556 /* Pods_GBShopRabbitMRTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +127,62 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				546ED5F918371C05E6192747 /* Pods_GBShopRabbitMR_GBShopRabbitMRUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2EDE59F0009328C974F32617 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18919D9B67F6AF87485097D5 /* Pods_GBShopRabbitMR.framework */,
+				B6ECA7A6D6018BD9B49BA0CB /* Pods_GBShopRabbitMR_GBShopRabbitMRUITests.framework */,
+				85C5F4FBD5C08B6E6AC78D26 /* Pods_GBShopRabbitMRTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A152FB6533B5E5C3C9014870 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C596479A494C77050B454A2A /* Pods-GBShopRabbitMR.debug.xcconfig */,
+				D464B4512BC47D3E5B8418B8 /* Pods-GBShopRabbitMR.release.xcconfig */,
+				F09BC5CA1A1FBAB69F3A7833 /* Pods-GBShopRabbitMR-GBShopRabbitMRUITests.debug.xcconfig */,
+				657E888E6E135A19695ACE20 /* Pods-GBShopRabbitMR-GBShopRabbitMRUITests.release.xcconfig */,
+				F36B4940ED1B378493E02A7B /* Pods-GBShopRabbitMRTests.debug.xcconfig */,
+				E1F14B6FDF7684F18A8E7038 /* Pods-GBShopRabbitMRTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DB0C75A327C3AE9800CB8940 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DB0C75A427C3AF1200CB8940 /* Auth.swift */,
+				DB0C75A627C3AFA500CB8940 /* AuthRequestFactory.swift */,
+				DB0C75A827C3B1AA00CB8940 /* RegistrationAndChanges.swift */,
+				DB0C75AA27C3BFDC00CB8940 /* RegistrationAndDataChangesFactory.swift */,
+				DB0C75C027C3DD0B00CB8940 /* RequestFactory.swift */,
+				DBBE3EBB27C7C2F000106565 /* ProductsRequestFactory.swift */,
+				DBBE3EBD27C7C34500106565 /* ProductsRequests.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		DB0C75C227C3DFA900CB8940 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DB0C75B627C3C91200CB8940 /* RequestRouter.swift */,
+				DB0C75B827C3CC8800CB8940 /* ResponseCodable.swift */,
+				DB0C75BA27C3D22F00CB8940 /* AbstractErrorParser.swift */,
+				DB0C75BC27C3D32F00CB8940 /* ErrorParser.swift */,
+				DB0C75BE27C3D3CF00CB8940 /* AbstractRequestFactory.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		DBE24C0A27C0335D00342549 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +190,8 @@
 				DBE24C2C27C0335E00342549 /* GBShopRabbitMRTests */,
 				DBE24C3627C0335E00342549 /* GBShopRabbitMRUITests */,
 				DBE24C1427C0335D00342549 /* Products */,
+				A152FB6533B5E5C3C9014870 /* Pods */,
+				2EDE59F0009328C974F32617 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,7 +219,10 @@
 		DBE24C2C27C0335E00342549 /* GBShopRabbitMRTests */ = {
 			isa = PBXGroup;
 			children = (
+				DBBE3ECB27C7D8D700106565 /* FullTestPlan.xctestplan */,
+				DBBE3EC927C7D65600106565 /* UnitTestPlan.xctestplan */,
 				DBE24C2D27C0335E00342549 /* GBShopRabbitMRTests.swift */,
+				DBBE3EC327C7CB0900106565 /* GBTests.swift */,
 			);
 			path = GBShopRabbitMRTests;
 			sourceTree = "<group>";
@@ -118,6 +230,7 @@
 		DBE24C3627C0335E00342549 /* GBShopRabbitMRUITests */ = {
 			isa = PBXGroup;
 			children = (
+				DBBE3ECA27C7D69F00106565 /* UITestPlan.xctestplan */,
 				DBE24C3727C0335E00342549 /* GBShopRabbitMRUITests.swift */,
 				DBE24C3927C0335E00342549 /* GBShopRabbitMRUITestsLaunchTests.swift */,
 			);
@@ -156,6 +269,13 @@
 		DBE24C4927C03EDE00342549 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				DB0C75AC27C3C14200CB8940 /* ChangeUserDataResult.swift */,
+				DB0C75AE27C3C1AA00CB8940 /* LoginResult.swift */,
+				DB0C75B027C3C21700CB8940 /* LogoutResult.swift */,
+				DB0C75B227C3C6C000CB8940 /* RegistrationUserResult.swift */,
+				DB0C75B427C3C72900CB8940 /* User.swift */,
+				DBBE3EBF27C7C5B700106565 /* Product.swift */,
+				DBBE3EC127C7C5CE00106565 /* ProductList.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -163,6 +283,7 @@
 		DBE24C4A27C03EEC00342549 /* BusinessLogic */ = {
 			isa = PBXGroup;
 			children = (
+				DB0C75A327C3AE9800CB8940 /* Network */,
 			);
 			path = BusinessLogic;
 			sourceTree = "<group>";
@@ -187,6 +308,7 @@
 		DBE24C4D27C03F3800342549 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				DB0C75C227C3DFA900CB8940 /* Network */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -198,9 +320,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DBE24C3D27C0335E00342549 /* Build configuration list for PBXNativeTarget "GBShopRabbitMR" */;
 			buildPhases = (
+				44536E7106A662C8602424C0 /* [CP] Check Pods Manifest.lock */,
 				DBE24C0F27C0335D00342549 /* Sources */,
 				DBE24C1027C0335D00342549 /* Frameworks */,
 				DBE24C1127C0335D00342549 /* Resources */,
+				740692D0B27A371690C480E1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -215,9 +339,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DBE24C4027C0335E00342549 /* Build configuration list for PBXNativeTarget "GBShopRabbitMRTests" */;
 			buildPhases = (
+				DF935D7E99125C4F12700603 /* [CP] Check Pods Manifest.lock */,
 				DBE24C2527C0335E00342549 /* Sources */,
 				DBE24C2627C0335E00342549 /* Frameworks */,
 				DBE24C2727C0335E00342549 /* Resources */,
+				FD7E9BD084A0D74D6B937A56 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -233,9 +359,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DBE24C4327C0335E00342549 /* Build configuration list for PBXNativeTarget "GBShopRabbitMRUITests" */;
 			buildPhases = (
+				DAE9B263B00D9AFDF4BC4C2D /* [CP] Check Pods Manifest.lock */,
 				DBE24C2F27C0335E00342549 /* Sources */,
 				DBE24C3027C0335E00342549 /* Frameworks */,
 				DBE24C3127C0335E00342549 /* Resources */,
+				5325A60D59DF69B76D1A8210 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -317,14 +445,153 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		44536E7106A662C8602424C0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GBShopRabbitMR-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5325A60D59DF69B76D1A8210 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GBShopRabbitMR-GBShopRabbitMRUITests/Pods-GBShopRabbitMR-GBShopRabbitMRUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GBShopRabbitMR-GBShopRabbitMRUITests/Pods-GBShopRabbitMR-GBShopRabbitMRUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GBShopRabbitMR-GBShopRabbitMRUITests/Pods-GBShopRabbitMR-GBShopRabbitMRUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		740692D0B27A371690C480E1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GBShopRabbitMR/Pods-GBShopRabbitMR-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GBShopRabbitMR/Pods-GBShopRabbitMR-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GBShopRabbitMR/Pods-GBShopRabbitMR-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DAE9B263B00D9AFDF4BC4C2D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GBShopRabbitMR-GBShopRabbitMRUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF935D7E99125C4F12700603 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GBShopRabbitMRTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD7E9BD084A0D74D6B937A56 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GBShopRabbitMRTests/Pods-GBShopRabbitMRTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GBShopRabbitMRTests/Pods-GBShopRabbitMRTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GBShopRabbitMRTests/Pods-GBShopRabbitMRTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DBE24C0F27C0335D00342549 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB0C75C127C3DD0B00CB8940 /* RequestFactory.swift in Sources */,
 				DBE24C1B27C0335D00342549 /* ViewController.swift in Sources */,
 				DBE24C1727C0335D00342549 /* AppDelegate.swift in Sources */,
+				DBBE3EBC27C7C2F000106565 /* ProductsRequestFactory.swift in Sources */,
+				DB0C75BF27C3D3CF00CB8940 /* AbstractRequestFactory.swift in Sources */,
+				DB0C75A927C3B1AA00CB8940 /* RegistrationAndChanges.swift in Sources */,
+				DB0C75BD27C3D32F00CB8940 /* ErrorParser.swift in Sources */,
+				DB0C75B927C3CC8800CB8940 /* ResponseCodable.swift in Sources */,
+				DB0C75AD27C3C14200CB8940 /* ChangeUserDataResult.swift in Sources */,
+				DBBE3EBE27C7C34500106565 /* ProductsRequests.swift in Sources */,
+				DB0C75A727C3AFA500CB8940 /* AuthRequestFactory.swift in Sources */,
+				DB0C75AB27C3BFDC00CB8940 /* RegistrationAndDataChangesFactory.swift in Sources */,
+				DB0C75AF27C3C1AA00CB8940 /* LoginResult.swift in Sources */,
 				DBE24C1927C0335D00342549 /* SceneDelegate.swift in Sources */,
+				DB0C75B527C3C72900CB8940 /* User.swift in Sources */,
+				DB0C75B127C3C21700CB8940 /* LogoutResult.swift in Sources */,
+				DB0C75B327C3C6C000CB8940 /* RegistrationUserResult.swift in Sources */,
+				DB0C75BB27C3D22F00CB8940 /* AbstractErrorParser.swift in Sources */,
+				DB0C75A527C3AF1200CB8940 /* Auth.swift in Sources */,
+				DBBE3EC227C7C5CE00106565 /* ProductList.swift in Sources */,
+				DB0C75B727C3C91200CB8940 /* RequestRouter.swift in Sources */,
+				DBBE3EC027C7C5B700106565 /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +599,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBBE3EC427C7CB0900106565 /* GBTests.swift in Sources */,
 				DBE24C2E27C0335E00342549 /* GBShopRabbitMRTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,6 +766,7 @@
 		};
 		DBE24C3E27C0335E00342549 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C596479A494C77050B454A2A /* Pods-GBShopRabbitMR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -526,6 +795,7 @@
 		};
 		DBE24C3F27C0335E00342549 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D464B4512BC47D3E5B8418B8 /* Pods-GBShopRabbitMR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -554,6 +824,7 @@
 		};
 		DBE24C4127C0335E00342549 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F36B4940ED1B378493E02A7B /* Pods-GBShopRabbitMRTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -579,6 +850,7 @@
 		};
 		DBE24C4227C0335E00342549 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1F14B6FDF7684F18A8E7038 /* Pods-GBShopRabbitMRTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -604,6 +876,7 @@
 		};
 		DBE24C4427C0335E00342549 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F09BC5CA1A1FBAB69F3A7833 /* Pods-GBShopRabbitMR-GBShopRabbitMRUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -627,6 +900,7 @@
 		};
 		DBE24C4527C0335E00342549 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 657E888E6E135A19695ACE20 /* Pods-GBShopRabbitMR-GBShopRabbitMRUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

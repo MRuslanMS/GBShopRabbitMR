@@ -1,0 +1,31 @@
+{
+  "configurations" : [
+    {
+      "id" : "F513FB5D-C843-4C9B-92A8-5444EE67CC7D",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:GBShopRabbitMR.xcodeproj",
+        "identifier" : "DBE24C2827C0335E00342549",
+        "name" : "GBShopRabbitMRTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:GBShopRabbitMR.xcodeproj",
+        "identifier" : "DBE24C3227C0335E00342549",
+        "name" : "GBShopRabbitMRUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

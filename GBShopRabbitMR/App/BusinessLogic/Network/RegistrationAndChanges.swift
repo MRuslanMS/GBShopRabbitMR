@@ -12,7 +12,7 @@ class RegistrationAndChanges: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
     let queue: DispatchQueue
-    let baseUrl = URL(string: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/")!
+    let baseUrl = URL(string: "https://still-tundra-91444.herokuapp.com/")!
     
     init (errorParser: AbstractErrorParser, sessionManager: Session, queue: DispatchQueue = DispatchQueue.global(qos: .utility)){
          self.errorParser = errorParser
@@ -22,14 +22,14 @@ class RegistrationAndChanges: AbstractRequestFactory {
 }
 
 extension RegistrationAndChanges: RegistrationAndDataChangesFactory {
-    func registration(idUser: Int, userName: String, password: String, userEmail: String, userGender: String, userCreditCardNumber: String, userBio: String, completionHandler: @escaping(AFDataResponse<RegistrationUserResult>) -> Void) {
+    func registration(userId: Int, userLogin: String, password: String, userName: String, userLastName: String, userEmail: String, userGender: String, userCreditCardNumber: String, userBio: String, completionHandler: @escaping(AFDataResponse<DefaultResult>) -> Void) {
         
-        let requestModel = Registration(baseUrl: baseUrl, idUser: idUser, userName: userName, password: password, userEmail: userEmail, userGender: userGender, userCreditCardNumber: userCreditCardNumber, userBio: userBio)
+        let requestModel = Registration(baseUrl: baseUrl, userId: userId, userLogin: userLogin, password: password, userName: userName, userLastName: userLastName, userEmail: userEmail, userGender: userGender, userCreditCardNumber: userCreditCardNumber, userBio: userBio)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
-    func dataChange(idUser: Int, userName: String, password: String, userEmail: String, userGender: String, userCreditCardNumber: String, userBio: String, completionHandler: @escaping(AFDataResponse<ChangeUserDataResult>) -> Void) {
+    func dataChange(userId: Int, userLogin: String, password: String, userName: String, userLastName: String, userEmail: String, userGender: String, userCreditCardNumber: String, userBio: String, completionHandler: @escaping(AFDataResponse<DefaultResult>) -> Void) {
         
-        let requestModel = Changes(baseUrl: baseUrl, idUser: idUser, userName: userName, password: password, userEmail: userEmail, userGender: userGender, userCreditCardNumber: userCreditCardNumber, userBio: userBio)
+        let requestModel = Changes(baseUrl: baseUrl, userId: userId, userLogin: userLogin, password: password, userName: userName, userLastName: userLastName, userEmail: userEmail, userGender: userGender, userCreditCardNumber: userCreditCardNumber, userBio: userBio)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 }
@@ -37,12 +37,14 @@ extension RegistrationAndChanges: RegistrationAndDataChangesFactory {
 extension RegistrationAndChanges {
     struct Registration: RequestRouter {
         let baseUrl: URL
-        let method: HTTPMethod = .get
-        let path: String = "registerUser.json"
+        let method: HTTPMethod = .post
+        let path: String = "registration"
         
-        let idUser: Int
-        let userName: String
+        let userId: Int
+        let userLogin: String
         let password: String
+        let userName: String
+        let userLastName: String
         let userEmail: String
         let userGender: String
         let userCreditCardNumber: String
@@ -50,9 +52,11 @@ extension RegistrationAndChanges {
         
         var parameters: Parameters? {
             return[
-                "id_User": idUser,
-                "username": userName,
+                "id_User": userId,
+                "userlogin": userLogin,
                 "password": password,
+                "username": userName,
+                "userlastname": userLastName,
                 "email": userEmail,
                 "gender": userGender,
                 "credit_card": userCreditCardNumber,
@@ -65,12 +69,14 @@ extension RegistrationAndChanges {
 extension RegistrationAndChanges {
     struct Changes: RequestRouter {
         let baseUrl: URL
-        let method: HTTPMethod = .get
-        let path: String = "changeUserData.json"
+        let method: HTTPMethod = .post
+        let path: String = "changeData"
         
-        let idUser: Int
-        let userName: String
+        let userId: Int
+        let userLogin: String
         let password: String
+        let userName: String
+        let userLastName: String
         let userEmail: String
         let userGender: String
         let userCreditCardNumber: String
@@ -78,9 +84,11 @@ extension RegistrationAndChanges {
         
         var parameters: Parameters? {
             return[
-                "id_User": idUser,
-                "username": userName,
+                "id_User": userId,
+                "userlogin": userLogin,
                 "password": password,
+                "username": userName,
+                "userlastname": userLastName,
                 "email": userEmail,
                 "gender": userGender,
                 "credit_card": userCreditCardNumber,

@@ -12,16 +12,16 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        authLogin(userName: "Somebody", password: "mypassword")
-        authLogout(idUser: 123)
-        userRegistration(idUser: 123, userName: "Somebody", password: "mypassword", userEmail: "some@some.ru", userGender: "m", userCreditCardNumber: "9872389-2424-234224-234", userBio: "This is good! I think I will switch to another language")
-        userDataChanges(idUser: 123, userName: "Somebody", password: "mypassword", userEmail: "some@some.ru", userGender: "m", userCreditCardNumber: "9872389-2424-234224-234", userBio: "This is good! I think I will switch to another language")
-        getProductList(pageNumber: 1, idCategory: 1)
+        //authLogin(login: "GB", password: "Gb1234")
+        //authLogout(login: "GB", password: "Gb1234")
+        //userRegistration(userId: 123, userLogin: "GBRabbit", password: "Gb12345678", userName: "Genadiy", userLastname: "Bukin", userEmail: "rus@mag.ru", userGender: "man", userCreditCardNumber: "9872389242423422", userBio: "best is the best")
+        userDataChanges(userId: 123, userLogin: "GBRabbit", password: "Gb12345678", userName: "Genadiy", userLastname: "Bukin", userEmail: "rus@mag.ru", userGender: "man", userCreditCardNumber: "9872389242423422", userBio: "best is the best")
+        //getProductList(pageNumber: 1, idCategory: 1)
         //authRequest()
     }
     
-    
-    /*func authRequest() {
+  /*
+    func authRequest() {
         let auth = requestFactory.makeAuthRequestFactory()
         auth.login(userName: "Somebody", password: "MyPassword")
         { response in
@@ -35,21 +35,21 @@ class ViewController: UIViewController {
     }
    */
      
-    func authLogin(userName: String, password: String) {
+    func authLogin(login: String, password: String) {
             let auth = requestFactory.makeAuthRequestFactory()
-            auth.login(userName: "Somebody", password: "MyPassword") { response in
+            auth.login(userLogin: login, password: password) { response in
                 switch response.result {
-                case .success(let login):
-                    print(login)
+                case .success(let result):
+                    print(result)
                 case .failure(let error):
                     print(error.localizedDescription)
                 }
             }
         }
         
-    func authLogout(idUser: Int) {
+    func authLogout(login: String, password: String) {
             let auth = requestFactory.makeAuthRequestFactory()
-            auth.logout(idUser: idUser) { response in
+            auth.logout(userLogin: login, password: password) { response in
                 switch response.result {
                 case .success(let result):
                     print(result)
@@ -60,9 +60,9 @@ class ViewController: UIViewController {
         }
         
         
-    func userRegistration(idUser: Int, userName: String, password: String, userEmail: String, userGender: String, userCreditCardNumber: String, userBio: String) {
+    func userRegistration(userId: Int, userLogin: String, password: String, userName: String, userLastname: String, userEmail: String, userGender: String,  userCreditCardNumber: String, userBio: String) {
             let registration = requestFactory.makeRegistrationAndDataChangesFactory()
-            registration.registration(idUser: idUser, userName: userName, password: password, userEmail: userEmail, userGender: userGender, userCreditCardNumber: userCreditCardNumber, userBio: userBio) { response in
+        registration.registration(userId: userId, userLogin: userLogin, password: password, userName: userName, userLastName: userLastname, userEmail: userEmail, userGender: userGender, userCreditCardNumber: userCreditCardNumber, userBio: userBio) { response in
                 switch response.result {
                 case .success(let result):
                     print(result)
@@ -72,9 +72,9 @@ class ViewController: UIViewController {
             }
         }
         
-    func userDataChanges(idUser: Int, userName: String, password: String, userEmail: String, userGender: String, userCreditCardNumber: String, userBio: String) {
+    func userDataChanges(userId: Int, userLogin: String, password: String, userName: String, userLastname: String, userEmail: String, userGender: String, userCreditCardNumber: String, userBio: String) {
             let userChanges = requestFactory.makeRegistrationAndDataChangesFactory()
-            userChanges.dataChange(idUser: idUser, userName: userName, password: password, userEmail: userEmail, userGender: userGender, userCreditCardNumber: userCreditCardNumber, userBio: userBio) { response in
+            userChanges.dataChange(userId: userId, userLogin: userLogin, password: password, userName: userName, userLastName: userLastname, userEmail: userEmail, userGender: userGender, userCreditCardNumber: userCreditCardNumber, userBio: userBio) { response in
                 switch response.result {
                 case .success(let result):
                     print(result)

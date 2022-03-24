@@ -30,11 +30,11 @@ class GBShopProductTests: XCTestCase {
         let productName: String
         let productDescription: String
         
-        enum CodingKeys: String, CodingKey {
-                case productPrice
-                case productName
-                case productDescription
-            }
+//        enum CodingKeys: String, CodingKey {
+//                case productPrice
+//                case productName
+//            case productDescription
+//            }
     }
     
     struct ProductReviewsListStub: Codable {
@@ -48,12 +48,12 @@ class GBShopProductTests: XCTestCase {
         let productRating: Int
         let userReview: String
         
-        enum CodingKeys: String, CodingKey {
-            case reviewId
-            case userName
-            case productRating
-            case userReview
-        }
+  //      enum CodingKeys: String, CodingKey {
+  //          case reviewId
+  //          case userName
+  //          case productRating
+  //          case userReview
+  //      }
     }
 
     enum ApiErrorStub: Error {

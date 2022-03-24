@@ -25,6 +25,11 @@
 		DB0C75BD27C3D32F00CB8940 /* ErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0C75BC27C3D32F00CB8940 /* ErrorParser.swift */; };
 		DB0C75BF27C3D3CF00CB8940 /* AbstractRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0C75BE27C3D3CF00CB8940 /* AbstractRequestFactory.swift */; };
 		DB0C75C127C3DD0B00CB8940 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0C75C027C3DD0B00CB8940 /* RequestFactory.swift */; };
+		DB5505B127EC4FF600ACAF1A /* CartRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5505B027EC4FF600ACAF1A /* CartRequests.swift */; };
+		DB5505B427EC507400ACAF1A /* CartRequestsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5505B327EC507400ACAF1A /* CartRequestsFactory.swift */; };
+		DB5505B727EC52E700ACAF1A /* CartOrderedProductsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5505B627EC52E700ACAF1A /* CartOrderedProductsList.swift */; };
+		DB5505B927EC531100ACAF1A /* CartProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5505B827EC531100ACAF1A /* CartProduct.swift */; };
+		DB5505BB27EC540900ACAF1A /* GBShopRabbitMRCartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5505BA27EC540900ACAF1A /* GBShopRabbitMRCartTests.swift */; };
 		DBA51EBC27E06D7A0011DA65 /* ProductReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA51EBB27E06D7A0011DA65 /* ProductReview.swift */; };
 		DBA51EBE27E06D950011DA65 /* ProductReviewsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA51EBD27E06D950011DA65 /* ProductReviewsList.swift */; };
 		DBA51EC027E072E50011DA65 /* ProductReviewRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA51EBF27E072E50011DA65 /* ProductReviewRequestFactory.swift */; };
@@ -84,6 +89,11 @@
 		DB0C75BC27C3D32F00CB8940 /* ErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorParser.swift; sourceTree = "<group>"; };
 		DB0C75BE27C3D3CF00CB8940 /* AbstractRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractRequestFactory.swift; sourceTree = "<group>"; };
 		DB0C75C027C3DD0B00CB8940 /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
+		DB5505B027EC4FF600ACAF1A /* CartRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartRequests.swift; sourceTree = "<group>"; };
+		DB5505B327EC507400ACAF1A /* CartRequestsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartRequestsFactory.swift; sourceTree = "<group>"; };
+		DB5505B627EC52E700ACAF1A /* CartOrderedProductsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartOrderedProductsList.swift; sourceTree = "<group>"; };
+		DB5505B827EC531100ACAF1A /* CartProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartProduct.swift; sourceTree = "<group>"; };
+		DB5505BA27EC540900ACAF1A /* GBShopRabbitMRCartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBShopRabbitMRCartTests.swift; sourceTree = "<group>"; };
 		DBA51EBB27E06D7A0011DA65 /* ProductReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductReview.swift; sourceTree = "<group>"; };
 		DBA51EBD27E06D950011DA65 /* ProductReviewsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductReviewsList.swift; sourceTree = "<group>"; };
 		DBA51EBF27E072E50011DA65 /* ProductReviewRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductReviewRequestFactory.swift; sourceTree = "<group>"; };
@@ -168,15 +178,8 @@
 		DB0C75A327C3AE9800CB8940 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				DB0C75A427C3AF1200CB8940 /* Auth.swift */,
-				DB0C75A627C3AFA500CB8940 /* AuthRequestFactory.swift */,
-				DB0C75A827C3B1AA00CB8940 /* RegistrationAndChanges.swift */,
-				DB0C75AA27C3BFDC00CB8940 /* RegistrationAndDataChangesFactory.swift */,
-				DB0C75C027C3DD0B00CB8940 /* RequestFactory.swift */,
-				DBBE3EBB27C7C2F000106565 /* ProductsRequestFactory.swift */,
-				DBBE3EBD27C7C34500106565 /* ProductsRequests.swift */,
-				DBA51EBF27E072E50011DA65 /* ProductReviewRequestFactory.swift */,
-				DBA51EC127E072FE0011DA65 /* ProductReviewRequests.swift */,
+				DB5505B227EC503100ACAF1A /* RequestsFactoties */,
+				DB5505AF27EC4FB700ACAF1A /* Requests */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -191,6 +194,40 @@
 				DB0C75BE27C3D3CF00CB8940 /* AbstractRequestFactory.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		DB5505AF27EC4FB700ACAF1A /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				DB0C75A827C3B1AA00CB8940 /* RegistrationAndChanges.swift */,
+				DB0C75A427C3AF1200CB8940 /* Auth.swift */,
+				DBA51EC127E072FE0011DA65 /* ProductReviewRequests.swift */,
+				DBBE3EBD27C7C34500106565 /* ProductsRequests.swift */,
+				DB0C75C027C3DD0B00CB8940 /* RequestFactory.swift */,
+				DB5505B027EC4FF600ACAF1A /* CartRequests.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		DB5505B227EC503100ACAF1A /* RequestsFactoties */ = {
+			isa = PBXGroup;
+			children = (
+				DB0C75AA27C3BFDC00CB8940 /* RegistrationAndDataChangesFactory.swift */,
+				DB5505B327EC507400ACAF1A /* CartRequestsFactory.swift */,
+				DB0C75A627C3AFA500CB8940 /* AuthRequestFactory.swift */,
+				DBBE3EBB27C7C2F000106565 /* ProductsRequestFactory.swift */,
+				DBA51EBF27E072E50011DA65 /* ProductReviewRequestFactory.swift */,
+			);
+			path = RequestsFactoties;
+			sourceTree = "<group>";
+		};
+		DB5505B527EC51FC00ACAF1A /* CartModels */ = {
+			isa = PBXGroup;
+			children = (
+				DB5505B627EC52E700ACAF1A /* CartOrderedProductsList.swift */,
+				DB5505B827EC531100ACAF1A /* CartProduct.swift */,
+			);
+			path = CartModels;
 			sourceTree = "<group>";
 		};
 		DBE24C0A27C0335D00342549 = {
@@ -233,6 +270,7 @@
 				DBBE3EC927C7D65600106565 /* UnitTestPlan.xctestplan */,
 				DBE24C2D27C0335E00342549 /* GBShopRabbitMRTests.swift */,
 				DBBE3EC327C7CB0900106565 /* GBShopProductTests.swift */,
+				DB5505BA27EC540900ACAF1A /* GBShopRabbitMRCartTests.swift */,
 			);
 			path = GBShopRabbitMRTests;
 			sourceTree = "<group>";
@@ -279,6 +317,7 @@
 		DBE24C4927C03EDE00342549 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				DB5505B527EC51FC00ACAF1A /* CartModels */,
 				DB0C75AC27C3C14200CB8940 /* ChangeUserDataResult.swift */,
 				DB0C75AE27C3C1AA00CB8940 /* LoginResult.swift */,
 				DB0C75B027C3C21700CB8940 /* DefaultResult.swift */,
@@ -584,16 +623,20 @@
 			files = (
 				DB0C75C127C3DD0B00CB8940 /* RequestFactory.swift in Sources */,
 				DBE24C1B27C0335D00342549 /* ViewController.swift in Sources */,
+				DB5505B427EC507400ACAF1A /* CartRequestsFactory.swift in Sources */,
 				DBE24C1727C0335D00342549 /* AppDelegate.swift in Sources */,
 				DBA51EC227E072FE0011DA65 /* ProductReviewRequests.swift in Sources */,
 				DBBE3EBC27C7C2F000106565 /* ProductsRequestFactory.swift in Sources */,
+				DB5505B727EC52E700ACAF1A /* CartOrderedProductsList.swift in Sources */,
 				DB0C75BF27C3D3CF00CB8940 /* AbstractRequestFactory.swift in Sources */,
 				DB0C75A927C3B1AA00CB8940 /* RegistrationAndChanges.swift in Sources */,
 				DB0C75BD27C3D32F00CB8940 /* ErrorParser.swift in Sources */,
+				DB5505B127EC4FF600ACAF1A /* CartRequests.swift in Sources */,
 				DB0C75B927C3CC8800CB8940 /* ResponseCodable.swift in Sources */,
 				DB0C75AD27C3C14200CB8940 /* ChangeUserDataResult.swift in Sources */,
 				DBBE3EBE27C7C34500106565 /* ProductsRequests.swift in Sources */,
 				DB0C75A727C3AFA500CB8940 /* AuthRequestFactory.swift in Sources */,
+				DB5505B927EC531100ACAF1A /* CartProduct.swift in Sources */,
 				DB0C75AB27C3BFDC00CB8940 /* RegistrationAndDataChangesFactory.swift in Sources */,
 				DB0C75AF27C3C1AA00CB8940 /* LoginResult.swift in Sources */,
 				DBE24C1927C0335D00342549 /* SceneDelegate.swift in Sources */,
@@ -616,6 +659,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBBE3EC427C7CB0900106565 /* GBShopProductTests.swift in Sources */,
+				DB5505BB27EC540900ACAF1A /* GBShopRabbitMRCartTests.swift in Sources */,
 				DBE24C2E27C0335E00342549 /* GBShopRabbitMRTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

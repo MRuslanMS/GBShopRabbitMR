@@ -12,15 +12,20 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //authLogin(login: "GB", password: "Gb1234")
-        //authLogout(login: "GB", password: "Gb1234")
-        //userRegistration(userId: 123, userLogin: "GBRabbit", password: "Gb12345678", userName: "Genadiy", userLastname: "Bukin", userEmail: "rus@mag.ru", userGender: "man", userCreditCardNumber: "9872389242423422", userBio: "best is the best")
-        //userDataChanges(userId: 123, userLogin: "GBRabbit", password: "Gb12345678", userName: "Genadiy", userLastname: "Bukin", userEmail: "rus@mag.ru", userGender: "man", userCreditCardNumber: "9872389242423422", userBio: "best is the best")
-        //getProductList(pageNumber: 1, idCategory: 1)
+        authLogin(login: "GB", password: "Gb1234")
+        authLogout(login: "GB", password: "Gb1234")
+        userRegistration(userId: 123, userLogin: "GBRabbit", password: "Gb12345678", userName: "Genadiy", userLastname: "Bukin", userEmail: "rus@mag.ru", userGender: "man", userCreditCardNumber: "9872389242423422", userBio: "best is the best")
+        userDataChanges(userId: 123, userLogin: "GBRabbit", password: "Gb12345678", userName: "Genadiy", userLastname: "Bukin", userEmail: "rus@mag.ru", userGender: "man", userCreditCardNumber: "9872389242423422", userBio: "best is the best")
+        getProductList(pageNumber: 1, idCategory: 1)
         getProductReviewsList(productId: 123)
-        //addProductReview(productId: 123, userName: "Kevin", productRating: 5, userReview: "Very good")
-        //cancelProductReview(productId: 123, userName: "Kevin", reviewId: 76857)
+        addProductReview(productId: 123, userName: "Elvin", productRating: 5, userReview: "Very good")
+        cancelProductReview(productId: 123, userName: "Elvin", reviewId: 76857)
         //authRequest()
+          addProductToCart(productId: 234, productQuantity: 12)
+          deleteProductFromCart(productId: 564, productQuantity: 3)
+          getCartProductsList(userId: 234)
+          payCartProducts(userId: 453, userCreditCard: 4276380000000000)
+                 
     }
     
   /*
@@ -134,6 +139,54 @@ class ViewController: UIViewController {
                }
            }
        }
+    
+    func addProductToCart(productId: Int, productQuantity: Int) {
+             let addProduct = requestFactory.makeCartRequestsFactory()
+             addProduct.addProductToCart(productId: productId, productQuantity: productQuantity) { response in
+                 switch response.result {
+                 case .success(let result):
+                     print(result)
+                 case .failure(let error):
+                     print(error.localizedDescription)
+                 }
+             }
+         }
+
+         func deleteProductFromCart(productId: Int, productQuantity: Int) {
+             let deleteProduct = requestFactory.makeCartRequestsFactory()
+             deleteProduct.deleteProductToCart(productId: productId, productQuantity: productQuantity) { response in
+                 switch response.result {
+                 case .success(let result):
+                     print(result)
+                 case .failure(let error):
+                     print(error.localizedDescription)
+                 }
+             }
+         }
+
+         func getCartProductsList(userId: Int) {
+             let getCartProducts = requestFactory.makeCartRequestsFactory()
+             getCartProducts.getCartProductsList(userId: userId) { response in
+                 switch response.result {
+                 case .success(let result):
+                     print(result)
+                 case .failure(let error):
+                     print(error.localizedDescription)
+                 }
+             }
+         }
+
+         func payCartProducts(userId: Int, userCreditCard: Int) {
+             let payCart = requestFactory.makeCartRequestsFactory()
+             payCart.payCartProducts(userId: userId, userCreditCard: userCreditCard) { response in
+                 switch response.result {
+                 case .success(let result):
+                     print(result)
+                 case .failure(let error):
+                     print(error.localizedDescription)
+                 }
+             }
+         }
        
        func cancelProductReview(productId: Int, userName: String, reviewId: Int) {
            let cancelReview = requestFactory.makeProductsReviewsFactory()

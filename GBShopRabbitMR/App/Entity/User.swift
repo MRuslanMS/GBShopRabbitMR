@@ -13,10 +13,4 @@ struct User: Codable {
     let userName: String
     let userLastName: String
     
-    enum CodingKeys: String, CodingKey{
-        case userId
-        case userLogin
-        case userName
-        case userLastName
-    }
 }

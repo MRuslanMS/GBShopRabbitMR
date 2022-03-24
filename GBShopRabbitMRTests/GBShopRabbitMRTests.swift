@@ -9,7 +9,7 @@ import XCTest
 @testable import GBShopRabbitMR
 import Alamofire
 
-class GBShopRabbitMRTests: XCTestCase {
+class GBShopUserTests: XCTestCase {
 
     let expectation = XCTestExpectation(description: "Download API data")
     var errorParser: ErrorParserStub!
@@ -19,44 +19,10 @@ class GBShopRabbitMRTests: XCTestCase {
         let user: User
     }
     
-    struct LogoutResultStub: Codable {
+    struct DefaultResultStub: Codable {
         let result: Int
-    }
-    
-    struct RegistrationUserResultStub: Codable {
-        let result: Int
-        let userMessage: String
-    }
-    
-    struct ChangeUserDataResultStub: Codable {
-        let result: Int
-    }
-    
-    struct ProductListStub: Codable {
-        let id: Int
-        let productName: String
-        let price: Int
-        
-        
-        enum CodingKeys: String, CodingKey {
-            case id = "id_product"
-            case productName = "product_name"
-            case price
-        }
-    }
-
-    struct ProductStub: Codable {
-        let result: Int
-        let productName: String
-        let productPrice: Int
-        let productDescription: String
-        
-        enum CodingKeys: String, CodingKey {
-            case result
-            case productName = "product_name"
-            case productPrice = "product_price"
-            case productDescription = "product_description"
-        }
+        let userMessage: String?
+        let errorMessage: String?
     }
 
     enum ApiErrorStub: Error {
@@ -82,7 +48,6 @@ class GBShopRabbitMRTests: XCTestCase {
         try super.tearDownWithError()
         errorParser = nil
     }
-
     
     func testExample() throws {
         // This is an example of a functional test case.
@@ -91,93 +56,149 @@ class GBShopRabbitMRTests: XCTestCase {
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        self.measure {
+       // self.measure {
             // Put the code you want to measure the time of here.
-        }
+        //}
     }
 
-    func testLoginRequest() {
-            let errorParser = ErrorParserStub()
-            
-            AF.request("https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/login.json").responseCodable(errorParser: errorParser) { (response: DataResponse<LoginResultStub, AFError>) in
-                switch response.result {
-                case .success(_):
-                    break
-                case .failure: XCTFail()
-                }
-                self.expectation.fulfill()
-            }
-            wait(for: [expectation], timeout: 5.0)
+func testLoginRequest() {
+    let errorParser = ErrorParserStub()
+        let userLogin = "GBRabbit"
+        let password = "Gb12345678"
+        var parameters: Parameters? {
+            return [
+                "userLogin": userLogin,
+                "password": password
+            ]
         }
-        
-        func testLogoutRequest() {
-            let errorParser = ErrorParserStub()
             
-            AF.request("https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/logout.json").responseCodable(errorParser: errorParser) { (response: DataResponse<LogoutResultStub, AFError>) in
-                switch response.result {
-                case .success(_):
-                    break
-                case .failure: XCTFail()
-                }
-                self.expectation.fulfill()
-            }
-            wait(for: [expectation], timeout: 5.0)
+    AF.request("https://still-tundra-91444.herokuapp.com/login", method: .post, parameters: parameters).responseCodable(errorParser: errorParser) { (response: DataResponse<DefaultResultStub, AFError>) in
+        switch response.result {
+        case .success(_):
+            break
+        case .failure: XCTFail()
         }
-        
-        func testRegistrationRequest() {
-            let errorParser = ErrorParserStub()
-            
-            AF.request("https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/registerUser.json").responseCodable(errorParser: errorParser) { (response: DataResponse<RegistrationUserResultStub, AFError>) in
-                switch response.result {
-                case .success(_):
-                    break
-                case .failure: XCTFail()
-                }
-                self.expectation.fulfill()
-            }
-            wait(for: [expectation], timeout: 5.0)
-        }
-        
-        func testDataChangeRequest() {
-            let errorParser = ErrorParserStub()
-            
-            AF.request("https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/changeUserData.json").responseCodable(errorParser: errorParser) { (response: DataResponse<ChangeUserDataResultStub, AFError>) in
-                switch response.result {
-                case .success(_):
-                    break
-                case .failure: XCTFail()
-                }
-                self.expectation.fulfill()
-            }
-            wait(for: [expectation], timeout: 5.0)
-        }
-        
-        func testProductRequest() {
-            let errorParser = ErrorParserStub()
-            
-            AF.request("https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/getGoodById.json").responseCodable(errorParser: errorParser) { (response: DataResponse<ProductStub, AFError>) in
-                switch response.result {
-                case .success(_):
-                    break
-                case .failure: XCTFail()
-                }
-                self.expectation.fulfill()
-            }
-            wait(for: [expectation], timeout: 5.0)
-        }
-        
-        func testProductListRequest() {
-            let errorParser = ErrorParserStub()
-            
-            AF.request("https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/catalogData.json").responseCodable(errorParser: errorParser) { (response: DataResponse<[ProductListStub], AFError>) in
-                switch response.result {
-                case .success(_):
-                    break
-                case .failure: XCTFail()
-                }
-                self.expectation.fulfill()
-            }
-            wait(for: [expectation], timeout: 5.0)
-        }
+        self.expectation.fulfill()
+    }
+    wait(for: [expectation], timeout: 5.0)
     
 }
+ 
+func testLogoutRequest() {
+
+    let errorParser = ErrorParserStub()
+    let userLogin = "GBRabbit"
+    let password = "Gb12345678"
+    var parameters: Parameters? {
+        return [
+            "userLogin": userLogin,
+            "password": password
+        ]
+    }
+
+
+    AF.request("https://still-tundra-91444.herokuapp.com/logout", method: .post, parameters: parameters).responseCodable(errorParser: errorParser) { (response: DataResponse<DefaultResultStub, AFError>) in
+        switch response.result {
+        case .success(_):
+            break
+        case .failure: XCTFail()
+        }
+        self.expectation.fulfill()
+    }
+
+    wait(for: [expectation], timeout: 5.0)
+}
+        
+func testRegistrationRequest() {
+    let errorParser = ErrorParserStub()
+    let userId = 1
+    let userLogin = "GBRabbit"
+    let password = "Gb12345678"
+    let userName = "Genadiy"
+    let userLastname = "Bukin"
+    let userEmail = "rus@mag.ru"
+    let userCreditCard = "9988780000000000"
+    let userBio = "best is the best"
+    var parameters: Parameters? {
+        
+        return [
+            
+            "userId": userId,
+            
+            "userLogin": userLogin,
+            
+            "password": password,
+            
+            "userName": userName,
+            
+            "userLastname": userLastname,
+            
+            "userEmail": userEmail,
+            
+            "userCreditCard": userCreditCard,
+            
+            "userBio": userBio
+        
+        ]
+    
+    }
+            
+    AF.request("https://still-tundra-91444.herokuapp.com/registration", method: .post, parameters: parameters).responseCodable(errorParser: errorParser) { (response: DataResponse<DefaultResultStub, AFError>) in
+        switch response.result {
+        case .success(_):
+            break
+        case .failure: XCTFail()
+        }
+        self.expectation.fulfill()
+    }
+    wait(for: [expectation], timeout: 5.0)
+    
+}
+            
+func testDataChangeRequest() {
+    let errorParser = ErrorParserStub()
+    let userId = 1
+    let userLogin = "GBRabbit"
+    let password = "Gb12345678"
+    let userName = "Genadiy"
+    let userLastname = "Bukin"
+    let userEmail = "rus@mag.ru"
+    let userCreditCard = "9988780000000000"
+    let userBio = "best is the best"
+    var parameters: Parameters? {
+
+        return [
+    
+            "userId": userId,
+    
+            "userLogin": userLogin,
+    
+            "password": password,
+    
+            "userName": userName,
+    
+            "userLastname": userLastname,
+    
+            "userEmail": userEmail,
+    
+            "userCreditCard": userCreditCard,
+    
+            "userBio": userBio
+
+        ]
+        
+    }
+    AF.request("https://still-tundra-91444.herokuapp.com/changeData", method: .post, parameters: parameters).responseCodable(errorParser: errorParser) { (response: DataResponse<DefaultResultStub, AFError>) in
+
+        switch response.result {
+        case .success(_):
+            break
+        case .failure: XCTFail()
+        }
+        self.expectation.fulfill()
+    }
+    
+    wait(for: [expectation], timeout: 5.0)
+            }
+}
+
